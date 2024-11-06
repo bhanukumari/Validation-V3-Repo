@@ -1,0 +1,12 @@
+region           = "ap-south-1"
+instance_count   = 1
+ami_id           = "ami-09b0a86a2c84101e1"
+instance_type    = "t3a.micro"
+public_ip        = true
+key_name         = "mgmt"
+volume_size      = 10
+volume_type      = "gp3"
+encrypted_volume = true
+ec2_name         = "nimbuspost-mgmt-openvpn"
+sg_name          = "nimbuspost-mgmt-openvpn-sg"
+ssh_ips = [ "0.0.0.0/0"]

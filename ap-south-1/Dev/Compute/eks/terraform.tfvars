@@ -1,0 +1,13 @@
+region              = "ap-south-1"
+cluster_name        = "nimbuspost-dev-eks-cluster"
+eks_node_sg_name    = "nimbuspost-dev-eks-node-sg"
+eks_node_group_name = "nimbuspost-dev-eks-ng"
+w1_instance_type    = ["t3a.xlarge"]
+w1_disk_size        = 50
+w1_max_capacity     = 2
+w1_desired_capacity = 1
+w1_min_capacity     = 1
+w1_capacity_type    = "SPOT"
+eks_cluster_version = "1.28"
+ssh_key             = "app-NG"
+ami_type            = "AL2_x86_64"

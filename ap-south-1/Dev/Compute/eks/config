@@ -1,0 +1,27 @@
+apiVersion: v1
+clusters:
+- cluster:
+    server: https://A3FF1ABEDABAFDEE5F7786C2DC48BAD4.gr7.ap-south-1.eks.amazonaws.com
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJTzR3YTNSYXN5VVV3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TkRBNU1qUXhNRE00TkRoYUZ3MHpOREE1TWpJeE1EUXpORGhhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURULzBxbE5iY0dBVERCMWtNWnBwdlpxVGpmYkRiZmR3S051bytONDM3T0ZXWHZLTnZSbnlyT2JPU3kKa1VMcDlTQ2dGQjBRS1ZBQ0pZQy9TcVZHWVRoRllRQ2NjNHptcUNaYUd4dE9uZXkxQ3EwUVdCN1NPUXNvMzhwNAp0OGJxK0F5VzM0VzRqdW9zQzFhaEJmemN5cUp4THZHVmJETGtHckphQVJQZTl4TVFUV0VpSEl1Z0M2SmVjSVFOCmZEUHpMNkYrZldCaEo5aVFxU2o0YTRwWWVJV1RINXBteW1sL3VXbitzbmQwK3dkRXZQa0VIM1RjVXJJb0JPSHQKREJkWXAyejNVOU9hdEg0R3I4bTl4YUhYcWMyWDdtVk9GbnU4WjRwZEhrdmJqVXppM05VUmRMeWw3YnRDaE1JUwpZbU1oajEydVMxQUpmNmhFQmlxYjNtOUt6M0NSQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJTSVlSTzNXU25kZ1crMUNKOE9QZHEzRFFEcTBEQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQWtQS1FFRmpqUwpIOXdQYmx5YkJFUDlJOVE0RGZWMTdZemdTVW1jV3FDTjNlTlNwTDRxZjJTWGIvdGw5L3o1bnZvb2pkQ3JyTG12CmlJOXdFTHo0S2wwWkUxZE5ELzZIQ1ZqdHFaQXpFVXVYaFliQ2NDeUpLYVBveGd3WStjbzNDS1p1bTd0ampxS00KM080ZEdMcUlXaWR2bmFlTW0wNXpTR0hJOGxzZ2tDN2F5QjFvdFFYemZEQ2VTRHpSTUZFdC82cUxHYytVOGNCZQpMeTNBN21YMG9JM2owYzQ5azl6TlFXS2s3dFpsb25CVS9ua2Y2TDV1RWlpQkxlWHhPSGwzYkdscy9MdjVaYTNiCkZmS0hUVUwzajEwb3BvQ0VRRmtiRHNNNGI5d1RLQytPanRjYys1WS83YW9iaU1MLy9UR1kzUnBUMC96cnVKMU0KaGRQOHVGKzhZWmVuCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  name: arn:aws:eks:ap-south-1:009160048213:cluster/nimbuspost-dev-eks-cluster
+contexts:
+- context:
+    cluster: arn:aws:eks:ap-south-1:009160048213:cluster/nimbuspost-dev-eks-cluster
+    user: arn:aws:eks:ap-south-1:009160048213:cluster/nimbuspost-dev-eks-cluster
+  name: arn:aws:eks:ap-south-1:009160048213:cluster/nimbuspost-dev-eks-cluster
+current-context: arn:aws:eks:ap-south-1:009160048213:cluster/nimbuspost-dev-eks-cluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:ap-south-1:009160048213:cluster/nimbuspost-dev-eks-cluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - --region
+      - ap-south-1
+      - eks
+      - get-token
+      - --cluster-name
+      - nimbuspost-dev-eks-cluster
+      command: aws
